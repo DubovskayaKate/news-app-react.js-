@@ -5,34 +5,37 @@
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <title>React App</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <header >
+      <h1 class="header__label">News</h1>
+    </header>
+    <main>
+      <div class="main__sources" id="main-sources" >
+          <!-- sources -->
+      </div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+      <div class="main__search">
+          <input class="main__search__input" id="main-search-input" placeholder="Search filter" type="search">
+          <button class="main__search__bn" id="main-search-bn">Search</button>          
+      </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+      <div class="main__newsContent" id ="main-newsContent">            
+          <!-- news_content -->
+      </div>
+
+      <img id="main-img" src="images/banner.png">
+            
+      <div style="text-align: center;">
+          <h4 class="main__errorLabel" id="main-errorLabel" style="display: none">No matches :(</h4>
+      </div>
+      <button class="main__load-bn" id="main-load-bn" style="display: none">Load more</button> 
+      
+    </main>
+    <footer>
+      <p>&copy; Dubovskaya, 751001. Powered by <a  href="https://newsapi.org/">NewsAPI</a> </p>
+    </footer>
   </body>
 </html>
