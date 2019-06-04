@@ -1,19 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import APINews from './APINews';
+import App from './App';
+
 import './index.css';
 import './images/img1.jpg';
 import './images/banner.png';
 
-import SourceList  from './SourceList.js';
-import NewsList from './NewsList.js';
 
-let  lastUsedUrl = '';
+
+
+/*let  lastUsedUrl = '';
 let page = 0;
 let alreadyNewsDisplayed = 0;
 let newsInfo = [];
 const loadButton = '#main-load-bn';
 const errorLabel = '#main-errorLabel';
-const promosionImg = '#main-img';
+const promosionImg = '#main-img';*/
 
 let view = {
     hideElement:  (element) => {
@@ -24,7 +27,7 @@ let view = {
         document.querySelector(element).style.display = 'unset';
     }
 }
-
+/*
 let controller =  {
 
     loadSources : () => {
@@ -100,13 +103,16 @@ let model = {
     createNewsBlock : ( data) =>{
         ReactDOM.render(<NewsList newsList={data}/>,document.getElementById('main-newsContent'));
     }
-}
+}*/
 
-controller.loadSources();
 
+ReactDOM.render(<App />, document.getElementById('root'));
+APINews.loadSources();
+/*
 document.querySelector(loadButton).addEventListener('click', () => {
     controller.appendNews();
   });
+
 
 document.querySelector('#main-sources').addEventListener('click', (event) =>{
     controller.loadNewsByUrl(`everything?sources=${event.target.id}&pageSize=5&page=1&`);
@@ -126,5 +132,6 @@ document.querySelector('#main-search-input').addEventListener('keyup',
             document.querySelector('#main-search-bn').click();
     }
 });
+*/
 
 

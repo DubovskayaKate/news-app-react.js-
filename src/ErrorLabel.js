@@ -1,10 +1,19 @@
 import React from 'react';
+import { NONAME } from 'dns';
 
 class ErrorLabel extends React.Component{
     render(){
-        <div style="text-align: center;">
-            <h4 class="main__errorLabel" id="main-errorLabel" style="display: none">No matches :(</h4>
-        </div>
+        let styleInfoDiv = {
+            textAlign :  'center'
+        }
+        let styleInfoLabel = {
+            display : 'none'
+        }
+        return (
+            <div style={styleInfoDiv}>
+                <h4 class="main__errorLabel" id="main-errorLabel" style={styleInfoLabel}>No matches :(</h4>
+            </div>
+        )
     }
 }
 

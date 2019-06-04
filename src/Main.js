@@ -1,18 +1,22 @@
 import React from 'react';
-import Search from 'Search';
-import ErrorLabel from '/ErrorLabel';
-import DefaultButton from '/DefaultButton';
+import Search from './Search';
+import ErrorLabel from './ErrorLabel';
+import DefaultButton from './DefaultButton';
+import APINews from './APINews';
+import instance from './APINews';
 
 class Main extends React.Component{
-    render(){
+    render() { 
+        const fun = () => {
+            instance.appendNews();
+        }
+
         return(
             <main>
-                <div class="main__sources" id="main-sources" >
-
+                <div class="main__sources" id="main-sources">
                 </div>
                 <Search/>
                 <div class="main__newsContent" id ="main-newsContent">   
-
                 </div>
                 <img id="main-img" src="images/banner.png"/>                    
                 <ErrorLabel/>
@@ -21,6 +25,7 @@ class Main extends React.Component{
                     id = "main-load-bn"
                     name = "Load more"    
                     style = "display: none"
+                    func = {fun}
                 />
             
             </main>

@@ -1,22 +1,41 @@
 import React from 'react';
-import InputBox from '/InputBox';
-import DefaultButton from '/DefaultButton.js'
+import InputBox from './InputBox';
+import DefaultButton from './DefaultButton.js'
+import APINews from './APINews';
+import instance from './APINews';
 
-class Search extends React.Component{
+export default class Search extends React.Component{
     render(){
-        <div class="main__search">
-            <InputBox 
-                className = "main__search__input"
-                id = "main-search-input"
-                type = "search"
-                placeHolder = "Search filter"
-            />
-            <DefaultButton
-                className = "main__search__bn"
-                id = "main-search-bn"
-                name = "Search"                        
-            />         
-        </div>
+        const enterKeys = () => {
+                if(document.querySelector('#main-search-input').value.length > 0){
+                    instance.loadNewsByUrl(`everything?q=${document.querySelector('#main-search-input').value}&pageSize=5&page=1&`);
+            }
+        }
+
+        const funcKey =  (event) => { 
+                event.preventDefault();
+                if (event.keyCode === 13) {
+                    document.querySelector('#main-search-bn').click();
+            }
+        }
+        return (
+            <div class="main__search">
+                <InputBox 
+                    className = "main__search__input"
+                    id = "main-search-input"
+                    type = "search"
+                    placeHolder = "Search filter"
+                    func = {funcKey}
+                />
+                <DefaultButton
+                    className = "main__search__bn"
+                    id = "main-search-bn"
+                    name = "Search"    
+                    func =  {enterKeys}
+                    
+                />         
+            </div>
+        )
     }
+    
 }
-export default Search
