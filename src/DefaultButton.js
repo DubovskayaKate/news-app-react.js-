@@ -6,7 +6,7 @@ class DefaultButton extends React.Component{
         isVisiable: true
     }
     render(){
-        var styleVis ={
+        let styleVis ={
             display : this.props.style
         }
         console.log(this.props);
