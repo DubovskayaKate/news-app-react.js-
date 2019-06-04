@@ -7,16 +7,17 @@ class News extends React.Component{
         const imgStyle = {
             backgroundImage: `url(${img})`
         };
+        const classesContent = this.props.className__content;
         return (
-            <div className="news-item">
-                <div className="news-item__content__img" style={imgStyle}>
+            <div className={this.props.className__news}>
+                <div className={classesContent.img} style={imgStyle}>
                             
                 </div>    
-                <div className="news-item__content">
-                    <h3 className="news-item__content__title">{this.props.data.title}</h3>
-                    <h4 className="news-item__content__source">{this.props.data.source.name}</h4>
-                    <p className="news-item__content__text">{this.props.data.description}</p>
-                    <a className="news-item__content__link" href={this.props.data.url}>Read more</a>
+                <div className={classesContent.content}>
+                    <h3 className={classesContent.title}>{this.props.data.title}</h3>
+                    <h4 className={classesContent.source}>{this.props.data.source.name}</h4>
+                    <p className={classesContent.text}>{this.props.data.description}</p>
+                    <a className={classesContent.link} href={this.props.data.url}>Read more</a>
                 </div>
             </div>
         )
