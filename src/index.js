@@ -128,4 +128,3 @@ document.querySelector('#main-search-input').addEventListener('keyup',
 });
 
 
-//import * as serviceWorker from './serviceWorker';

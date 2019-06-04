@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class Source extends React.Component{
     render(){
         return (
@@ -11,10 +12,3 @@ class Source extends React.Component{
 }
 
 export default Source
-/**
-            
-                        <DefButton
-                id = {this.props.source.id}
-                key = {this.props.source.id}
-                name = {this.props.source.name}
-            />*/
