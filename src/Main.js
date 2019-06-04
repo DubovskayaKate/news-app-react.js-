@@ -13,10 +13,10 @@ class Main extends React.Component{
 
         return(
             <main>
-                <div class="main__sources" id="main-sources">
+                <div className="main__sources" id="main-sources">
                 </div>
                 <Search/>
-                <div class="main__newsContent" id ="main-newsContent">   
+                <div className="main__newsContent" id ="main-newsContent">   
                 </div>
                 <img id="main-img" src="images/banner.png"/>                    
                 <ErrorLabel/>

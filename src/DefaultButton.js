@@ -9,10 +9,11 @@ class DefaultButton extends React.Component{
         var styleVis ={
             display : this.props.style
         }
+        console.log(this.props);
         return (
-            <button class={this.props.className} 
+            <button className={this.props.className} 
                     id={this.props.id} 
-                    onclick = {this.props.func}
+                    onClick = {this.props.func}
                     key={this.props.id} 
                     style = {styleVis}
                     >{this.props.name}

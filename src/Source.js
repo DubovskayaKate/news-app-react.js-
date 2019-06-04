@@ -7,7 +7,7 @@ class Source extends React.Component{
             <div className = {this.props.classbutton}>
                 <button id={this.props.source.id} 
                         key={this.props.source.id}
-                        onclick= {this.props.func}>
+                        onClick= {this.props.func}>
                         {this.props.source.name}
                 </button> 
             </div>

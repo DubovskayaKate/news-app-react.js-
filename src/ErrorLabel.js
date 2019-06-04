@@ -11,7 +11,7 @@ class ErrorLabel extends React.Component{
         }
         return (
             <div style={styleInfoDiv}>
-                <h4 class="main__errorLabel" id="main-errorLabel" style={styleInfoLabel}>No matches :(</h4>
+                <h4 className="main__errorLabel" id="main-errorLabel" style={styleInfoLabel}>No matches :(</h4>
             </div>
         )
     }

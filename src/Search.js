@@ -19,13 +19,13 @@ export default class Search extends React.Component{
             }
         }
         return (
-            <div class="main__search">
+            <div className="main__search">
                 <InputBox 
                     className = "main__search__input"
                     id = "main-search-input"
                     type = "search"
                     placeHolder = "Search filter"
-                    func = {funcKey}
+                    func = {funcKey.bind(this)}
                 />
                 <DefaultButton
                     className = "main__search__bn"
